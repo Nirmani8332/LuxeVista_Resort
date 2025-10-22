@@ -12,6 +12,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LuxeVistaResort">
         <activity
+            android:name=".RestaurantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SpaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivitiesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RoomSelector"
+            android:exported="false" />
+        <activity
+            android:name=".FindRooms"
+            android:exported="false" />
+        <activity
+            android:name=".DatePicker"
+            android:exported="false" />
+        <activity
+            android:name=".BookingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity

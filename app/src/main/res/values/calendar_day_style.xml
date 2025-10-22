@@ -1,0 +1,17 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<style name="calendar_day_style"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:textAlignment">center</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:textColor">#888888</item>
+</style>
+
+    <style name="calendar_day_style.Empty" parent="calendar_day_style">
+        <item name="android:textColor">#CCCCCC</item>
+        <item name="android:text"></item>
+    </style>
+
+</resources>
