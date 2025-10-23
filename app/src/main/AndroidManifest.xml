@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LuxeVistaResort">
         <activity
+            android:name=".BookingConfirmation"
+            android:exported="false" />
+        <activity
             android:name=".RestaurantActivity"
             android:exported="false" />
         <activity
