@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".BookingConfirmationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_elegant_gradient">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="8dp"
+            android:contentDescription="back_button"
+            android:src="@drawable/ic_back" />
+
+        <LinearLayout
+            android:id="@+id/logoLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:contentDescription="app_logo"
+                android:src="@drawable/logo1" />
+
+            <TextView
+                android:id="@+id/tvAppTitle"
+                android:fontFamily="@font/alex_brush"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/app_name"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                style="@style/CardViewStyle"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deluxe Lake View Suit (king)"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date: 15 OCT / 18 OCT" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adults: 1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Children (under 12): 0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rooms: 1" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                style="@style/CardViewStyle"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact Information (all fields are mandatory)"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp" />
+
+                    <EditText
+                        android:id="@+id/et_first_name"
+                        style="@style/EditTextStyle"
+                        android:hint="First Name" />
+
+                    <EditText
+                        android:id="@+id/et_last_name"
+                        style="@style/EditTextStyle"
+                        android:hint="Last Name" />
+
+                    <EditText
+                        android:id="@+id/et_email"
+                        style="@style/EditTextStyle"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress" />
+
+                    <EditText
+                        android:id="@+id/et_mobile"
+                        style="@style/EditTextStyle"
+                        android:hint="Mobile Number"
+                        android:inputType="phone" />
+
+                    <Switch
+                        android:id="@+id/switch_sms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Send my reservation confirmation by SMS"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                style="@style/CardViewStyle"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Arrival Time"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/btn_select_arrival_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Arrival Time"
+                        android:backgroundTint="@color/grey_light"
+                        android:textColor="@android:color/black"
+                        android:layout_marginBottom="12dp" />
+
+                    <EditText
+                        android:id="@+id/et_special_requests"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="top"
+                        android:padding="8dp"
+                        android:hint="Please let us know of any additional request to help us prepare your arrival."
+                        android:background="@drawable/date_background"
+                        android:inputType="textMultiLine" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                style="@style/CardViewStyle"
+                android:layout_marginBottom="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="12dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Voucher code"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"/>
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/right_arrow"
+                            android:contentDescription="Apply Voucher"/>
+                    </RelativeLayout>
+
+                    <View style="@style/Divider" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Charges"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Room Charge" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="LKR 35,000.00" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Service Charge &amp; Tax" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android.text="LKR 5,600.00" />
+                    </RelativeLayout>
+
+                    <View style="@style/Divider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Charges to Pay"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/tv_total_charges"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="LKR 40,600.00"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="By continuing, you agree to the terms and conditions of the resort."
+                        android:textSize="12sp" />
+
+                     <CheckBox
+                        android:id="@+id/cb_terms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="I agree to the Terms and Conditions"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            
+            <Button
+                android:id="@+id/btn_book_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Book Now"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
