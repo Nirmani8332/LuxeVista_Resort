@@ -7,15 +7,12 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.viewpager2.widget.ViewPager2;
-import com.google.android.material.tabs.TabLayout;
-import com.google.android.material.tabs.TabLayoutMediator;
 import java.util.ArrayList;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
     private ViewPager2 viewPager;
-    private TabLayout tabLayout;
     private BannerAdapter adapter;
     private Handler handler = new Handler();
     private Runnable runnable;
@@ -29,7 +26,6 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         viewPager = findViewById(R.id.viewPager);
-        tabLayout = findViewById(R.id.tabLayout);
         cardBookStay = findViewById(R.id.cardBookStay);
         cardRestaurants = findViewById(R.id.cardRestaurants);
         cardSpa = findViewById(R.id.cardSpa);
@@ -42,10 +38,6 @@ public class HomeActivity extends AppCompatActivity {
 
         adapter = new BannerAdapter(imageList);
         viewPager.setAdapter(adapter);
-
-        new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> {
-            // Optional: You can configure the tabs here if needed
-        }).attach();
 
         runnable = new Runnable() {
             @Override
